@@ -12,4 +12,5 @@ Both functions have defaults set for acceptable rates, type 1 and type 2 error r
 df <- c(0,0,0,1,1,0,1,1,0,0,0,0,1,0,0,1)
 
 cusumr(df)
+
 cusumr_plot(df)
