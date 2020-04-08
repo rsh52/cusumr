@@ -1,0 +1,22 @@
+Package: cusumr
+Type: Package
+Title: Compute Cumulative Summation Score in Binary Outcome Measures
+Version: 0.1.0
+Authors@R: c(person(given = 'Sangmo', 
+                    family = 'Je', 
+                    email = 'JES@EMAIL.CHOP.EDU',
+                    role = c('aut', 'cre')),
+             person(given = 'Richard', 
+                    family = 'Hanna', email = 'richardshanna91@gmail.com',
+                    role = 'aut'))
+Description: A tool for calculating cumulative sum scores among binary data sets.
+License: NA
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 3.6.0)
+Imports: 
+    dplyr,
+    checkmate,
+    ggplot2
+RoxygenNote: 7.1.0
