@@ -19,8 +19,13 @@ cusumr_plot(df)
 
 ## Reference
 The use of the Cusum technique in the assessment of trainee competence in new procedures. Int J Qual Health Care. 2000 Oct;12(5):433-8.
-https://www.ncbi.nlm.nih.gov/pubmed/11079224
+
+[url](https://www.ncbi.nlm.nih.gov/pubmed/11079224)
+
 Cumulative sum (CUSUM) assessment and medical education: a square peg in a round hole. Anaesthesia, 2011, 66, pages 243-254.
-https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2044.2011.06692.x
+
+[url](https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2044.2011.06692.x)
+
 An application of the learning curve cumulative summation test to evaluate training for endotracheal intubation in emergency medicine. Emerg Med J, 2015;32:291..294.
-https://www.ncbi.nlm.nih.gov/pubmed/24154942
+
+[url](https://www.ncbi.nlm.nih.gov/pubmed/24154942)
