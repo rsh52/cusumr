@@ -2,7 +2,7 @@
 % Please edit documentation in R/cusumr.R
 \name{cusumr}
 \alias{cusumr}
-\title{Perform cumulative sum analysis on binary dataset}
+\title{Cumulative sum analysis on binary dataset.}
 \usage{
 cusumr(
   events_outcomes,
@@ -28,5 +28,28 @@ cusumr(
 \item{reset}{boolean, optional (default=True). Whether to reset score when the score hits the decision limit in monitoring phase. If yes, the cusum score will start at zero again and restart monitoring.}
 }
 \description{
-Perform cumulative sum analysis on binary dataset
+The cusumr command takes in a binary vector of data and returns a dataframe of rolling cusum scores per event. The dataframe is indicative of compliance with the dataset.
+Users can choose to include a learning phase and reset options based on default values for upper and lower decision limits as well as acceptable rates of  success and error.
+
+For plotting see the \link[cusumr]{cusumr_plot} command.
+}
+\examples{
+df <- c(0,0,0,1,1,0,1,0,1,1,1,0)
+cusumr(df)
+cusumr(events_outcomes = df, learning = FALSE, reset = TRUE)
+
+
+}
+\references{
+The use of the Cusum technique in the assessment of trainee competence in new procedures. Int J Qual Health Care. 2000 Oct;12(5):433-8.
+
+\url{https://www.ncbi.nlm.nih.gov/pubmed/11079224}
+
+Cumulative sum (CUSUM) assessment and medical education: a square peg in a round hole. Anaesthesia, 2011, 66, pages 243-254.
+
+\url{https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2044.2011.06692.x}
+
+An application of the learning curve cumulative summation test to evaluate training for endotracheal intubation in emergency medicine. Emerg Med J, 2015;32:291?..294.
+
+\url{https://www.ncbi.nlm.nih.gov/pubmed/24154942}
 }

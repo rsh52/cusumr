@@ -2,7 +2,7 @@
 % Please edit documentation in R/cusumr_plot.R
 \name{cusumr_plot}
 \alias{cusumr_plot}
-\title{Perform cumulative sum analysis on binary dataset}
+\title{Graphic display of cumulative sum analysis on binary dataset}
 \usage{
 cusumr_plot(
   events_outcomes,
@@ -28,5 +28,23 @@ cusumr_plot(
 \item{reset}{boolean, optional (default=True). Whether to reset score when the score hits the decision limit in monitoring phase. If yes, the cusum score will start at zero again and restart monitoring.}
 }
 \description{
-Perform cumulative sum analysis on binary dataset
+The cusumr_plot() command builds on the same architecture of the \link[cusumr]{cusumr} command, while automating the production of a graphic visual. Visuals are developed using the ggplot2 package.
+}
+\examples{
+df <- c(0,0,0,1,1,0,1,0,1,1,1,0)
+cusumr_plot(df)
+cusumr_plot(events_outcomes = df, learning = FALSE, reset = TRUE)
+
+#' @references
+The use of the Cusum technique in the assessment of trainee competence in new procedures. Int J Qual Health Care. 2000 Oct;12(5):433-8.
+
+\url{https://www.ncbi.nlm.nih.gov/pubmed/11079224}
+
+Cumulative sum (CUSUM) assessment and medical education: a square peg in a round hole. Anaesthesia, 2011, 66, pages 243-254.
+
+\url{https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2044.2011.06692.x}
+
+An application of the learning curve cumulative summation test to evaluate training for endotracheal intubation in emergency medicine. Emerg Med J, 2015;32:291?..294.
+
+\url{https://www.ncbi.nlm.nih.gov/pubmed/24154942}
 }

@@ -1,4 +1,10 @@
-#' Perform cumulative sum analysis on binary dataset
+#' Cumulative sum analysis on binary dataset.
+#'
+#' @description
+#' The cusumr command takes in a binary vector of data and returns a dataframe of rolling cusum scores per event. The dataframe is indicative of compliance with the dataset.
+#' Users can choose to include a learning phase and reset options based on default values for upper and lower decision limits as well as acceptable rates of  success and error.
+#'
+#' For plotting see the \link[cusumr]{cusumr_plot} command.
 #'
 #' @param events_outcomes vector = [n_samples of 0s and 1s]. Binary Integer values. If intergers are not 0 or 1, then the FALSE alarms should be explicitly given.
 #' @param acceptable_rate numeric, default=0.2. Number between 0 and 1. Acceptable success rate of the process being monitored.
@@ -6,8 +12,27 @@
 #' @param type2_error_rate numeric, default=0.2 Number between 0 and 1. A false negative or type 2 error rate
 #' @param learning boolean, optional (default=True). Whether to start from learning phase or from monitoring phase.
 #' @param reset boolean, optional (default=True). Whether to reset score when the score hits the decision limit in monitoring phase. If yes, the cusum score will start at zero again and restart monitoring.
+#'
+#' @examples
+#' df <- c(0,0,0,1,1,0,1,0,1,1,1,0)
+#' cusumr(df)
+#' cusumr(events_outcomes = df, learning = FALSE, reset = TRUE)
+#'
+#'
+#' @references
+#' The use of the Cusum technique in the assessment of trainee competence in new procedures. Int J Qual Health Care. 2000 Oct;12(5):433-8.
+#'
+#' \url{https://www.ncbi.nlm.nih.gov/pubmed/11079224}
+#'
+#' Cumulative sum (CUSUM) assessment and medical education: a square peg in a round hole. Anaesthesia, 2011, 66, pages 243-254.
+#'
+#' \url{https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2044.2011.06692.x}
+#'
+#' An application of the learning curve cumulative summation test to evaluate training for endotracheal intubation in emergency medicine. Emerg Med J, 2015;32:291?..294.
+#'
+#' \url{https://www.ncbi.nlm.nih.gov/pubmed/24154942}
 
-#
+
 # The 'cusumr' function
 # Compute cumulative summation score in binary outcome measures.
 # The cusum score started from 0.
@@ -47,9 +72,11 @@
 
 # Reference
 # The use of the Cusum technique in the assessment of trainee competence in new procedures. Int J Qual Health Care. 2000 Oct;12(5):433-8.
+# https://www.ncbi.nlm.nih.gov/pubmed/11079224
 # Cumulative sum (CUSUM) assessment and medical education: a square peg in a round hole. Anaesthesia, 2011, 66, pages 243-254.
+# https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2044.2011.06692.x
 # An application of the learning curve cumulative summation test to evaluate training for endotracheal intubation in emergency medicine. Emerg Med J, 2015;32:291?..294.
-
+# https://www.ncbi.nlm.nih.gov/pubmed/24154942
 
 # The 'cusumr' function
 #' @export

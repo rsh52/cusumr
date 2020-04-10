@@ -4,7 +4,7 @@ Title: Compute Cumulative Summation Score in Binary Outcome Measures
 Version: 0.1.0
 Authors@R: c(person(given = 'Sangmo', 
                     family = 'Je', 
-                    email = 'JES@EMAIL.CHOP.EDU',
+                    email = 'ontheera@gmail.com',
                     role = c('aut', 'cre')),
              person(given = 'Richard', 
                     family = 'Hanna', email = 'richardshanna91@gmail.com',
@@ -18,5 +18,6 @@ Depends:
 Imports: 
     dplyr,
     checkmate,
-    ggplot2
+    ggplot2,
+    Rdpack
 RoxygenNote: 7.1.0
