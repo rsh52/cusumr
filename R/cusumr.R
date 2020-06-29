@@ -14,7 +14,7 @@
 #' @param reset boolean, optional (default=True). Whether to reset score when the score hits the decision limit in monitoring phase. If yes, the cusum score will start at zero again and restart monitoring.
 #'
 #' @examples
-#' df <- c(0,0,0,1,1,0,1,0,1,1,1,0)
+#' df <- c(0,0,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1)
 #' cusumr(df)
 #' cusumr(events_outcomes = df, learning = FALSE, reset = TRUE)
 #'

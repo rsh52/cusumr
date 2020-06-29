@@ -11,11 +11,11 @@
 #' @param reset boolean, optional (default=True). Whether to reset score when the score hits the decision limit in monitoring phase. If yes, the cusum score will start at zero again and restart monitoring.
 #'
 #' @examples
-#' df <- c(0,0,0,1,1,0,1,0,1,1,1,0)
+#' df <- df <- c(0,0,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1)
 #' cusumr_plot(df)
 #' cusumr_plot(events_outcomes = df, learning = FALSE, reset = TRUE)
 #'
-#' #' @references
+#' @references
 #' The use of the Cusum technique in the assessment of trainee competence in new procedures. Int J Qual Health Care. 2000 Oct;12(5):433-8.
 #'
 #' \url{https://www.ncbi.nlm.nih.gov/pubmed/11079224}
