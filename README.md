@@ -24,7 +24,7 @@ cusumr(df)
 cusumr_plot(df)
 ```
 
-![cusumr_plot Output](/images/cusumr_plot.png)
+![cusumr_plot Output]("/images/cusumr_plot.png")
 
 ## Reference
 The use of the Cusum technique in the assessment of trainee competence in new procedures. Int J Qual Health Care. 2000 Oct;12(5):433-8. [url](https://www.ncbi.nlm.nih.gov/pubmed/11079224)
