@@ -138,6 +138,10 @@ Users can choose to include a learning phase and reset options based on default 
       <td><p>numeric, default=0.2. Number between 0 and 1. Acceptable success rate of the process being monitored.</p></td>
     </tr>
     <tr>
+      <th>unacceptable_rate</th>
+      <td><p>numeric, default=0.24 Number between 0 and 1.</p></td>
+    </tr>
+    <tr>
       <th>type1_error_rate</th>
       <td><p>numeric, default=0.1. Number between 0 and 1. A false positive or type 1 error rate</p></td>
     </tr>
@@ -165,7 +169,7 @@ Users can choose to include a learning phase and reset options based on default 
 <p><a href='https://www.ncbi.nlm.nih.gov/pubmed/24154942'>https://www.ncbi.nlm.nih.gov/pubmed/24154942</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span>
+    <pre class="examples"><div class='input'><span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>)</span>
 <span class='fu'>cusumr</span><span class='op'>(</span><span class='va'>df</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    number_events events_outcomes cusum_score learning_signal reset_signal
 #&gt; 1              1               0   0.0000000               1            0
@@ -210,11 +214,7 @@ Users can choose to include a learning phase and reset options based on default 
 #&gt; 40            40               1   0.0000000               0            0
 #&gt; 41            41               1   0.0000000               0            0
 #&gt; 42            42               1   0.0000000               0            0
-#&gt; 43            43               1   0.0000000               0            0
-#&gt; 44            44               0   0.7066951               0            0
-#&gt; 45            45               1   0.4133901               0            0
-#&gt; 46            46               0   1.1200852               0            0
-#&gt; 47            47               1   0.8267802               0            0</div><div class='input'><span class='fu'>cusumr</span><span class='op'>(</span>events_outcomes <span class='op'>=</span> <span class='va'>df</span>, learning <span class='op'>=</span> <span class='cn'>FALSE</span>, reset <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+#&gt; 43            43               1   0.0000000               0            0</div><div class='input'><span class='fu'>cusumr</span><span class='op'>(</span>events_outcomes <span class='op'>=</span> <span class='va'>df</span>, learning <span class='op'>=</span> <span class='cn'>FALSE</span>, reset <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    number_events events_outcomes cusum_score learning_signal reset_signal
 #&gt; 1              1               0   0.7066951               0            0
 #&gt; 2              2               0   1.4133901               0            0
@@ -258,11 +258,7 @@ Users can choose to include a learning phase and reset options based on default 
 #&gt; 40            40               1   0.0000000               0            0
 #&gt; 41            41               1   0.0000000               0            0
 #&gt; 42            42               1   0.0000000               0            0
-#&gt; 43            43               1   0.0000000               0            0
-#&gt; 44            44               0   0.7066951               0            0
-#&gt; 45            45               1   0.4133901               0            0
-#&gt; 46            46               0   1.1200852               0            0
-#&gt; 47            47               1   0.8267802               0            0</div><div class='input'>
+#&gt; 43            43               1   0.0000000               0            0</div><div class='input'>
 
 </div></pre>
   </div>
