@@ -31,11 +31,12 @@ cusumr_plot(
 The cusumr_plot() command builds on the same architecture of the \link[cusumr]{cusumr} command, while automating the production of a graphic visual. Visuals are developed using the ggplot2 package.
 }
 \examples{
-df <- c(0,0,0,1,1,0,1,0,1,1,1,0)
+df <- df <- c(0,0,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1)
 cusumr_plot(df)
 cusumr_plot(events_outcomes = df, learning = FALSE, reset = TRUE)
 
-#' @references
+}
+\references{
 The use of the Cusum technique in the assessment of trainee competence in new procedures. Int J Qual Health Care. 2000 Oct;12(5):433-8.
 
 \url{https://www.ncbi.nlm.nih.gov/pubmed/11079224}

@@ -34,7 +34,7 @@ Users can choose to include a learning phase and reset options based on default 
 For plotting see the \link[cusumr]{cusumr_plot} command.
 }
 \examples{
-df <- c(0,0,0,1,1,0,1,0,1,1,1,0)
+df <- c(0,0,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1)
 cusumr(df)
 cusumr(events_outcomes = df, learning = FALSE, reset = TRUE)
 
