@@ -10,7 +10,7 @@ Authors@R: c(person(given = 'Sangmo',
                     family = 'Hanna', email = 'richardshanna91@gmail.com',
                     role = 'aut'))
 Description: A tool for calculating cumulative sum scores among binary data sets.
-License: NA
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: 
@@ -19,7 +19,8 @@ Imports:
     dplyr,
     checkmate,
     ggplot2,
-    Rdpack
+    Rdpack,
+    tibble
 RoxygenNote: 7.1.1
 Suggests: 
     testthat (>= 3.0.0)

@@ -19,6 +19,8 @@ cusumr_plot(
 
 \item{acceptable_rate}{numeric, default=0.2. Number between 0 and 1. Acceptable success rate of the process being monitored.}
 
+\item{unacceptable_rate}{numeric, default=0.4. Number between 0 and 1.}
+
 \item{type1_error_rate}{numeric, default=0.1. Number between 0 and 1. A false positive or type 1 error rate}
 
 \item{type2_error_rate}{numeric, default=0.2 Number between 0 and 1. A false negative or type 2 error rate}
@@ -31,7 +33,7 @@ cusumr_plot(
 The cusumr_plot() command builds on the same architecture of the \link[cusumr]{cusumr} command, while automating the production of a graphic visual. Visuals are developed using the ggplot2 package.
 }
 \examples{
-df <- df <- c(0,0,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1)
+df <- df <- c(0,0,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
 cusumr_plot(df)
 cusumr_plot(events_outcomes = df, learning = FALSE, reset = TRUE)
 

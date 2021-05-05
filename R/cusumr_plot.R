@@ -5,13 +5,14 @@
 #'
 #' @param events_outcomes vector = [n_samples of 0s and 1s]. Binary Integer values. If intergers are not 0 or 1, then the FALSE alarms should be explicitly given.
 #' @param acceptable_rate numeric, default=0.2. Number between 0 and 1. Acceptable success rate of the process being monitored.
+#' @param unacceptable_rate numeric, default=0.4. Number between 0 and 1.
 #' @param type1_error_rate numeric, default=0.1. Number between 0 and 1. A false positive or type 1 error rate
 #' @param type2_error_rate numeric, default=0.2 Number between 0 and 1. A false negative or type 2 error rate
 #' @param learning boolean, optional (default=True). Whether to start from learning phase or from monitoring phase.
 #' @param reset boolean, optional (default=True). Whether to reset score when the score hits the decision limit in monitoring phase. If yes, the cusum score will start at zero again and restart monitoring.
 #'
 #' @examples
-#' df <- df <- c(0,0,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1)
+#' df <- df <- c(0,0,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
 #' cusumr_plot(df)
 #' cusumr_plot(events_outcomes = df, learning = FALSE, reset = TRUE)
 #'

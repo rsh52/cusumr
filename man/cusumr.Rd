@@ -19,6 +19,8 @@ cusumr(
 
 \item{acceptable_rate}{numeric, default=0.2. Number between 0 and 1. Acceptable success rate of the process being monitored.}
 
+\item{unacceptable_rate}{numeric, default=0.24 Number between 0 and 1.}
+
 \item{type1_error_rate}{numeric, default=0.1. Number between 0 and 1. A false positive or type 1 error rate}
 
 \item{type2_error_rate}{numeric, default=0.2 Number between 0 and 1. A false negative or type 2 error rate}
@@ -34,7 +36,7 @@ Users can choose to include a learning phase and reset options based on default 
 For plotting see the \link[cusumr]{cusumr_plot} command.
 }
 \examples{
-df <- c(0,0,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1)
+df <- c(0,0,0,0,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
 cusumr(df)
 cusumr(events_outcomes = df, learning = FALSE, reset = TRUE)
 
