@@ -1,5 +1,9 @@
 # cusumr
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/rsh52/cusumr/workflows/R-CMD-check/badge.svg)](https://github.com/rsh52/cusumr/actions)
+<!-- badges: end -->
+
 ## Overview
 `cusumr` is a R package dedicated to analyzing binary data sets for cumulative summation. There are two main functions in this package:
 
